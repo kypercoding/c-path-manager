@@ -4,7 +4,7 @@
 
 The C Path Manager is a small program (primarily intended for Linux machines) to keep track of a user's most commonly consulted directory or file paths. The program makes use of the Redis database and the C programming language to keep track of users' path preferences, and can be used in conjunction with other Linux commands.
 
-## Installation
+## Installation and Compilation
 
 To use this program, the user **must** have the following installed:
 * clang
@@ -25,6 +25,20 @@ By default, the name of the executable should be "cm". Feel free to change this 
 ```shell
 ./cm
 ```
+
+Before running the executable, please make sure that you have started the redis-server service. Depending on how you installed redis, you may either need to call:
+
+```shell
+sudo systemctl start redis-server
+```
+
+or
+
+```shell
+sudo snap start redis
+```
+
+or some other command that starts the redis server.
 
 In a later section, "Usage - Applications", this guide goes over potential use cases for this program.
 
